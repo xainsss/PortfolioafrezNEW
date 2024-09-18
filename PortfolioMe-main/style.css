@@ -1,0 +1,665 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "Nunito", sans-serif;
+  z-index: 999;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #FFF5E4;
+}
+
+section {
+  min-height: 100vh;
+  padding: 10rem 9% 2rem;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 9%;
+  /* background-color: var(--bg-color); */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.header.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Blur effect */
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #55679C;
+  border-radius: 3px;
+  margin-left: 0;
+}
+
+.logo {
+  font-size: 2.5rem;
+  color: #55679C;
+  left: 10rem;
+  font-weight: 700;
+  cursor: default;
+  text-decoration: none;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  z-index: 1000;
+}
+
+.logo span {
+  color: #3C3D37;
+}
+
+.navbar a {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin-left: 3rem;
+ 
+  font-size: 1.9rem;
+  text-decoration: none;
+  color: #55679C;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+}
+
+.navbar a:hover {
+  color: var(--main-color);
+  transition: 0.4s;
+}
+
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-content h3 {
+  font-size: 3.6rem;
+  font-weight: 700;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.home-content h3 span{
+  font-size:3.6rem;
+  font-weight: 700;
+  color: #7C93C3;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.home-content .name-1{
+  font-size: 2.5rem;
+  color: #7C93C3;
+  font-weight: 10;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.home-content h3:nth-last-of-type(2) {
+  margin-bottom: 2rem;
+}
+.home-content h1 {
+  font-size: 5.6rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.img-about img {
+  width: 25vw;
+  position: sticky;
+  top: 10;
+  margin-right: 3rem;
+}
+
+ 
+
+.home-content p {
+  font-size: 1.7rem;
+  color: #666;
+  font-family: 'Courier New', Courier, monospace;
+  font-style: italic;
+  text-align: left;
+}
+
+.social-media a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background: transparent;
+  border: 0.2rem solid #55679C;
+  border-radius: 50%;
+  font-size: 2rem;
+  color: var(--snd-bf-color);
+  margin: 3rem 1.5rem 3rem 0;
+  transition: 0.5s ease;
+  text-decoration: none;
+}
+.social-media a:hover {
+  background-color: var(--main-color);
+  color: var(--snd-bf-color);
+  box-shadow: 0 0 1rem var(--main-color);
+}
+
+
+
+/* about */
+.about-container {
+  padding-block: 10em;
+}
+
+.row-about {
+  display: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  gap: 50;
+}
+
+.col-about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.img-about {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  bottom: 100px;
+
+  height: auto;
+  margin: 0 auto;
+  z-index: -1000;
+}
+.top-about-me {
+  text-align: center;
+  margin-bottom: 5em;
+}
+
+.top-about-me h1 {
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 10px;
+  margin-top: 1em;
+}
+
+/* Services Section */
+.services-section {
+  padding: 50px 0;
+  text-align: center;
+ 
+}
+
+.services-section h2 {
+  font-size: 32px;
+  color: #55679C;
+  margin-bottom: 40px;
+  display: inline-block; /* Agar border bawah hanya di bawah teks */
+  border-bottom: 3px solid #55679C; /* Garis bawah dengan ketebalan dan warna */
+  padding-bottom: 10px; /* Jarak antara teks dan garis */
+}
+
+.services-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap; /* Ensure it wraps on smaller screens */
+}
+
+.service-box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 10px 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  margin: 10px;
+  transition: transform 0.3s ease;
+  text-align: center;
+  height: 350px; /* Tinggi tetap untuk memastikan semua kotak seragam */
+  overflow: hidden;
+}
+
+.service-box img {
+  width: 40%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.service-box h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #55679C;
+}
+
+.service-box p {
+  overflow: scroll;
+  font-size: 1.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #666;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Hover effect */
+.service-box:hover {
+  transform: translateY(-10px);
+}
+
+/* portfolio */
+
+.port-section {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.port-section h2 {
+  font-size: 32px;
+  color: #55679C;
+  margin-bottom: 40px;
+  display: inline-block; /* Agar border bawah hanya di bawah teks */
+  border-bottom: 3px solid #55679C; /* Garis bawah dengan ketebalan dan warna */
+  padding-bottom: 10px; /* Jarak antara teks dan garis */
+}
+.port-section h1{
+ font-size: 24px;
+ color: #666;
+ margin-bottom: 20px;
+ font-weight: 10;
+ font-family: 'Times New Roman', Times, serif;
+}
+
+.port-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch; /* Agar kotak punya tinggi yang seragam */
+  flex-wrap: wrap;
+}
+
+.port-box {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 10px 8px 8px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  width: 100%;
+  margin: 10px;
+  transition: transform 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 400px; /* Tinggi tetap untuk memastikan semua kotak seragam */
+  overflow: hidden; /* Jika teks terlalu banyak, sembunyikan kelebihan teks */
+}
+
+.port-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 7px 4px 8px rgba(12, 12, 12, 0.1);
+}
+
+.port-box h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #16325B;
+}
+
+.port-box p {
+  overflow: scroll;
+  font-size: 1.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #666;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+/* Hover effect */
+.port-box:hover {
+  transform: translateY(-10px);
+}
+
+
+/* Skills Section */
+.skills-section {
+  padding: 50px 0;
+  text-align: center;
+  background-color: #FFF5E4;
+}
+
+.skills-section h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  border-bottom: 3px solid #000;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.skills-container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* Skill Box */
+.skills-section {
+  padding: 50px 0;
+  text-align: center;
+  background-color: #FFF5E4;
+}
+
+.skills-section h2 {
+  font-size: 32px;
+  color: #55679C;
+  margin-bottom: 40px;
+  border-bottom: 3px solid #55679C;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the items horizontally */
+  gap: 20px; /* Space between skill boxes */
+}
+
+/* Skill Box */
+.skill-box {
+  
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  max-width: 300px; /* Maximum width of each skill box */
+  width: 100%;
+  text-align: left;
+ 
+}
+
+.skill-icon {
+  width: 50px; /* Adjust icon size as needed */
+  height: 50px;
+  margin-right: 20px;
+}
+
+.skill-text {
+  text-align: left;
+}
+
+.skill-box h3 {
+  font-size: 24px;
+  margin: 0;
+}
+
+/* .educationexp{
+  font-size: 1rem;
+} */
+
+.experience-section h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  border-bottom: 3px solid #000;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.education, .experience {
+  margin-bottom: 40px;
+}
+
+.education h3, .experience h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.edu-container, .exp-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.edu-item, .exp-item {
+  padding: 0%;
+  width: 100%;
+  max-width: 800px;
+  margin-right: 7%;
+  margin-bottom: auto;
+  text-align: left;
+}
+
+.edu-item h4, .exp-item h4 {
+  font-size: 24px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.edu-item p, .exp-item p {
+  font-size: 16px;
+  color: #666;
+  margin: 5px 0;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  border-bottom: 3px solid #000;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* Contact Form */
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-size: 16px;
+  font-family: 'Courier New', Courier, monospace;
+  margin-bottom: 8px;
+  display: block;
+  text-align: left;
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Contact Info */
+/* Contact Section */
+.contact-section {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #F1DEC6;
+}
+
+.contact-section h2, .info-section h2 {
+  font-size: 32px;
+  color: #55679C;
+  margin-bottom: 40px;
+  border-bottom: 3px solid #55679C;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+/* Contact Form */
+.contact-form {
+  max-width: 500px;
+  float: left; /* Menggeser form ke kiri */
+  padding: 20px;
+  background-color: #FFF5E4;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-size: 16px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Info Section */
+.info-section {
+  padding: 50px 20px;
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+.info-container {
+  flex: 1; /* Mengambil ruang sisa di sebelah kanan */
+  display: flex;
+  flex-direction: column; /* Mengatur konten dalam kolom */
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  margin-top: -43em;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  max-width: 400px;
+  padding: 10px;
+  margin-left: 50%;
+}
+
+.contact-info img {
+  width: 60px;
+  height: 60px;
+  margin-right: 15px;
+  border-radius: 30px;
+}
+
+.contact-info p {
+  font-size: 16px;
+  color: #333;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/* footer */
+.footer {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  color: #333;
+  position: relative; /* Atur posisinya jika diperlukan */
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Optional, untuk sedikit efek */
+}

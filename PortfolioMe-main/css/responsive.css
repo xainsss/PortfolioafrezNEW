@@ -1,0 +1,237 @@
+@media (max-width: 480px) {
+
+    body, *{
+        z-index: 0;
+    }
+
+    body{
+        overflow-x: hidden;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 3em;
+        right: 0;
+        width: 60%;
+        height: 0;
+        margin-right: 15px;
+        max-width: 120px;
+        text-align: end;
+        overflow: hidden;
+        border-radius: 0;
+        transition: height 0.5s ease, opacity 0.5s ease;
+        opacity: 0;
+        z-index: -1000;
+    }
+
+    .navbar.active {
+        height: 180px;
+        opacity: 1;
+        margin-right: 15px;
+    }
+
+    .hamburger {
+        display: flex;
+        position: relative;
+    }
+
+    .navbar a {
+        color: #000;
+        font-weight: 700;
+        font-family: 'Times New Roman', Times, serif;
+        padding: 10px;
+    }
+
+    .home {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .home-content {
+        width: 100%;
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    .home-content p {
+        text-align: center;
+    }
+
+    .img-about, .home-content {
+        flex: 1;
+    }
+
+    .home {
+        flex-direction: column;
+    }
+
+    .img-about img {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .educationexp {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+    }
+
+    .education, .experience {
+        width: 100%;
+        max-width: 700px;
+        margin-bottom: 15px;
+    }
+
+    .edu-item, .exp-item {
+        margin-right: 0;
+    }
+
+    .info-container {
+        margin-right: 100%;
+        margin-top: 5px;
+        justify-content: space-evenly;
+        font-size: 50px;
+    }
+
+    .info-container img {
+        margin-left: -2rem;
+    }
+
+    .contact-container {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .contact-info p {
+        text-align: left;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    
+    body, *{
+        z-index: 0;
+    }
+
+    body{
+        overflow-x: hidden;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 4em;
+        right: 0;
+        width: 50%;
+        height: 0;
+        margin-right: 25px;
+        max-width: 150px;
+        text-align: end;
+        overflow: hidden;
+        border-radius: 0;
+        transition: height 0.5s ease, opacity 0.5s ease; /* Smooth dropdown */
+        opacity: 6;
+        z-index: -1000;
+
+    }
+
+    .navbar.active {
+        height: 225px; /* Adjust height based on content */
+        opacity: 1;
+        border-radius: 0;
+        margin-right: 25px;
+    }
+
+    .hamburger {
+        display: flex;
+        margin-right: 1rem;
+    }
+
+    .navbar a {
+        color: #000;
+        font-weight: 700;
+        font-family: 'Times New Roman', Times, serif;
+        padding: 15px;
+    }
+    
+    .home {
+        flex-direction: row;
+        text-align: left;  
+    }
+
+    .home-content {
+        width: 100%;
+        padding: 0 20px; 
+        text-align: center;
+        z-index: auto;
+    }
+
+    .home-content p{
+        text-align: center;
+    }
+
+
+    .img-about, .home-content {
+        flex: 1;    
+    }
+
+
+    .home {
+        flex-direction: column;
+    }
+
+    .img-about img {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    .educationexp {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+
+    }
+
+    .education, .experience {
+        width: 100%;
+        max-width: 900px; /* Centering items on smaller screens */
+        margin-bottom: 20px;
+    }
+
+    .edu-item{
+        margin-right: -5rem;
+    }
+    .exp-item{
+        margin-right: -5rem;
+    }
+   .info-container{
+    margin-right: 100%;
+    margin-top: 5px;
+    justify-content: space-evenly;
+    font-size: 62.5px;
+    }
+
+    .info-container img{
+        margin-left: -3rem;
+
+    }
+
+
+    .contact-container{
+    justify-content: center;
+    border-width: 100%;
+    }
+
+    .contact-info p{
+        text-align: left;
+    }
+}
